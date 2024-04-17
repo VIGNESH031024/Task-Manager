@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="./day1.css">
+
+</head>
+
+<body>
+    <h1 style="justify-content: space-around; position: sticky;" class="sticky"><span>T</span>ask <span
+        style="color: red; justify-content: space-around;">M</span>anager</h1>
+
+    <div class="main">
+      
+
+        <div class="tab">
+            <table class="dataTable">
+                <thead>
+                    <tr style="color: aliceblue;">
+                        <th>Id</th>
+                        <th>TASK</th>
+                        <th>DESCRIPTION</th>
+                        <th>DURATION</th>
+                        <th colspan="2">ACTIONS</th>
+
+                    </tr>
+                </thead>
+                <!---------- display table ---------------------->
+                <tbody>
+
+                </tbody>
+
+
+            </table>
+            <!-----------------filter dropdown------------- -->
+
+            <div class="drop">
+                <h2>Filter here !</h2>
+
+                <select id="taskSelect">
+                    <option value="All">All</option>
+                    <option value="Meeting">Meeting</option>
+                    <option value="Project">Project</option>
+                    <option value="Personal Break">Personal Break</option>
+                </select>
+            </div>
+        </div>
+            <!-- <button class="addTask" id="addTaskButton" onclick="showPopup()">Add Task</button> -->
+
+
+
+
+
+        <!--------------name field --------------------->
+        <!-- <h3 class="done">Done by</h3>
+            <h1 class="name">V S VIGNESH</h1> -->
+
+
+        <!-------------------- adding new Task ---------->
+
+
+
+        <div class="Input">
+            <div>
+                <h2>Add Task:</h2>
+                <div class="Input_box">
+                    <select id="task">
+                        <option value="" selected disabled> Select </option>
+                        <option value="Meeting">Meeting</option>
+                        <option value="Project">Project</option>
+                        <option value="Personal Break">Personal Break</option>
+                    </select> <br><br>
+                    <select id="description">
+                        <option value="" selected disabled> Select </option>
+                        <option value="Development">development</option>
+                        <option value="Client Meeting">Client Meeting</option>
+                        <option value="-">-</option>
+                    </select><br><br>
+
+                    <input type="text" id="duration" value="00:00:00">
+                    <br><br>
+                    <div class="buttoncontainer">
+
+                    <span><button id="submit" type="submit" onclick="store()">Submit</button></span>
+                    <span><button id="update" type="submit" onclick="Update()"> Update</button></span>
+                </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div id="watch">
+            <div class="circle">
+                <p id="stopwatch" style="font-size: xx-large;">00:00:00</p>
+            </div><br><br>
+            <button id="startstop" style="display: inline-block; margin-right: 10px;"
+                onclick="StartStop()">Start</button>
+            <button id="reset" style="display: inline-block;" onclick="Reset()">Reset</button>
+
+
+
+        
+        
+    </div>
+    </div>
+    <!-------------------update form--------------->
+   
+
+    <script src="./day1.js"></script>
+</body>
+
+</html>

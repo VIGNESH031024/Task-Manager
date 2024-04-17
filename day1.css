@@ -1,0 +1,443 @@
+*{
+  background-attachment: fixed;
+  background-image: url(./back.jpg);
+  color: white;
+ 
+ 
+
+}
+h1::first-letter {
+  color: red;
+}
+h1.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 5px;
+  background-color: #cae8ca;
+
+}
+
+h1 {
+  color: rgb(250, 246, 246); /* or any other default color you want */
+  text-align: center;
+}
+
+.main {
+  position: relative;
+  justify-content: space;
+  background-color: white;
+
+}
+.tab{
+  position: relative;
+  width: 800px;
+  height: 1500px;
+
+}
+
+table{
+  position: absolute;
+  background-color: black;
+  display: block;
+  border: solid goldenrod;
+  color: white;
+  position: absolute;
+  top: 130px;
+}
+
+
+.Input{
+  position: absolute;
+  top: 80px;
+  margin-top: 1px;
+  right: 50px;
+  margin-left: 700px;
+  width: 250px;
+  padding: 40px;
+  display: inline;
+}
+
+.Input_box{
+  border: 1px solid gold;
+  color: rgb(239, 230, 230);
+  bottom: 50px;
+  right: 50px;
+  padding: 20px;
+  height: 300px;
+  width: 150px;
+  background-color: rgb(9, 9, 9);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10%;
+}
+#task , #description{
+  padding: 10px;
+  box-sizing: content-box;
+  background-color: black;
+  border-radius: 4px;
+
+}
+/* ----------------- input field time ----------------- */
+#duration{
+  text-align: center;
+  border: 1px solid white;
+  height: 30px;
+  width: 80px;
+  font-size: 20px;
+  padding: 2px;
+  border-radius: 4px;
+}
+
+
+
+
+/* ---------------------------button styles------------------------------------ */
+
+
+
+/* CSS */
+
+
+.buttoncontainer{
+  display:flex inline-block;
+  justify-content: space-between;
+  flex-direction: row;
+}
+#submit,#update{
+  padding:4px;
+  color:white;
+  border:1px solid white;
+  justify-content: space-between;
+  border-radius: 5px;
+
+}
+
+
+#startstop,#reset,.addTask{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 6px 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  border-radius: 6px;
+  border: none;
+
+  color: #fff;
+  background: linear-gradient(180deg, #f74b59 0%, #f67036 100%);
+   background-origin: border-box;
+  box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button:focus {
+  box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+  outline: 0;
+}
+.update{
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.update:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #0716ea,
+    #18117c,
+    #113f70,
+    #1c5593,
+    #0078d0,
+    #0078d0,
+    #310d8c
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.update:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+
+
+
+
+.delete{
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.delete:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #f01f4f,
+    #ff003c,
+    #ff4d00,
+    #ff8000,
+    #ff6600,
+    #ff0044,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.delete:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+/* -------------------------table styles----------------------------------------- */
+table,
+th,
+td {
+  
+  border-collapse: collapse;
+  padding: 20px;
+  border-color: rgb(232, 116, 116);
+
+}
+table{
+
+  margin-left: 30px;
+  
+  border-bottom: solid 4px;
+}
+.tab{
+  height:1000px;
+  width:800px;
+  padding-bottom: 100px ;
+  margin-bottom: 50px;
+}
+
+
+th {
+  background-color: rgb(22, 25, 18);
+  color: rgb(182, 119, 30);
+  border-bottom: 1px solid goldenrod;
+
+}
+
+tr:nth-child(even) {
+  background-color: #2b2f31;
+}
+
+/* ------------------------------------filter style--------------------------- */
+
+
+
+.drop {
+  position: absolute;
+  top:1px;
+  left: 40px;
+  margin-bottom: 20px;
+  background-color: black;
+}
+.drop label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.drop select {
+  width: 150px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  background-color: black;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.drop select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+/* ---------------------------- add task button styles-------------------------------------- */
+.addTask{
+  position: absolute;
+  padding: 15px;
+  top:50px;
+  right: 10px;
+  margin-bottom: 20px;
+  background-color: #0078d0;
+  border: 0;
+  border-radius: 56px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  outline: 0;
+  padding: 16px 21px;
+
+
+  
+}
+.addTask:before {
+  background-color: initial;
+  background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+  border-radius: 125px;
+  content: "";
+  height: 50%;
+  left: 4%;
+  opacity: .5;
+  position: absolute;
+  top: 0;
+  transition: all .3s;
+  width: 92%;
+}
+.addTask:hover {
+  box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+  transform: scale(1.05);
+}
+@media (min-width: 768px) {
+  .button-71 {
+    padding: 16px 48px;
+  }
+}
+
+/* -----------------------------my Style--------------------------- */
+
+.name {
+  position: absolute;
+  bottom: 60px;
+  right: 20px;
+  color: #1d2c3c;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-size: x-large;
+}
+
+.done {
+  position: absolute;
+  bottom: 100px;
+  right: 100px;
+
+}
+
+/* -------------------------timer style----------------------- */
+
+#watch{
+  position: absolute;
+  bottom: 120px;
+  right: 150px;
+  height: 400px;
+  width: 200px;
+  justify-content: space-around;
+  align-items: center;
+
+}
+.circle{
+  display: flex;
+    height: 200px;
+    width: 200px;
+    color:rgb(155, 33, 33);
+    border: rgb(152, 59, 59) 5px dashed;
+    border: 7px inset rgb(93, 72, 166);
+    outline: rgb(159, 156, 156) 2px solid ;
+    border-radius: 100%;
+    align-items:center;
+    justify-content:space-around;
+    padding: 5px;
+    background-color:lightcyan;
+    box-shadow: rgba(255, 64, 74, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+#startstop,#reset{
+  margin-left: 20px;
+
+}
+
+
+
+
+
+
